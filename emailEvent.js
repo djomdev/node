@@ -7,3 +7,4 @@ emitter.on('emailEvent', (message) => {
 });
 
 emitter.emit('emailEvent', 'Send activation email to user after registration');
+
