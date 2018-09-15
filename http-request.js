@@ -19,6 +19,7 @@
   * it simpler beacues is navitely 
   */
 
+  //post
  https.get(url, res => {
      /**
       * Use UFT-8 
@@ -31,15 +32,15 @@
      });
 
      res.on('end', () =>{
-         body = JSON.parse(body);
-         console.log(
+    //      body = JSON.parse(body);
+    //      console.log(
              
-            `
-            ${body[0].title} 
-            ${body[1].title} 
+    //         `
+    //         ${body[0].title} 
+    //         ${body[1].title} 
 
-            `
-     );
+    //         `
+    //  );
     //     fs.writeFile('data.json', body, 'UTF-8', (err)=>{
     //         if(err) return err;
     //         console.log('Just pulled all the posts and created file');
