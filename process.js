@@ -9,7 +9,7 @@
 
 
 // Standard Out object --> 
-process.stdout.write('Ask me a question'); 
+process.stdout.write('Ask me a question now'); 
 
 // Standard In object --> 
 // .on() method is a listener -- 'data' is the name of that listener it has a callback function getting that data back
