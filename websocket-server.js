@@ -15,7 +15,10 @@ WSS.on('connection', (ws)=>{
          * Everybody is connected to us and we are broadcasting that data to everybody
          */
         WSS.clients.forEach((client)=>{
+            
+            /**Sending data back to the client */
             client.send(message);
+
         });
 
 

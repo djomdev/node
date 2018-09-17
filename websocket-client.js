@@ -4,6 +4,7 @@
  */
  const WS = new WebSocket('ws://localhost:3232');
 
+    /**Message listener */
  WS.onmessage = (payload)=>{
 
     /**
@@ -13,6 +14,19 @@
     
      console.log(payload.data);
  };
+
+ WS.onopen = ()=>{
+
+     displayTitle('CONNECTED TO SERVER');
+ };
+
+ WS.onclose = ()=>{
+     displayTitle('CONNECTION CLOSED');
+ };
+
+ function displayTitle(title){
+     document.querySelector('h1').innerHTML = title;
+ }
 
  document.forms[0].onsubmit = ()=>{
 
