@@ -9,6 +9,16 @@ const WSS = new WebSocketServer({port: 3232});
 WSS.on('connection', (ws)=>{
 
     ws.on('message', (message)=>{
+        /**
+         * we are grabbing the message we are accessing - Every client we're looping
+         * through all the clients.
+         * Everybody is connected to us and we are broadcasting that data to everybody
+         */
+        WSS.clients.forEach((client)=>{
+            client.send(message);
+        });
+
+
         console.log(message);
     });
 
