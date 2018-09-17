@@ -7,6 +7,11 @@ const WSS = new WebSocketServer({port: 3232});
  * here you are listening for connection -
  */
 WSS.on('connection', (ws)=>{
+
+    ws.on('message', (message)=>{
+        console.log(message);
+    });
+
     console.log('We are connected');
 });
 
